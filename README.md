@@ -16,7 +16,7 @@ The steps to clean up the UCI HAR dataset are:
  3. extract the UCI HAR data set to the folder where you cloned this repository
      * The data set can be downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and must be unzipped
      * *Note:* After extracting the data set, you should have a subdirectory called `UCI HAR Dataset` in the folder the repository is cloned in
- 4. open R of RStudio
+ 4. open R or RStudio
  5. make sure the current working directory is the folder you extracted the repository to
      * use `getwd()` to check the current working directory and `setwd()` to set the current working directory
  6. start the script with `source("run_analysis.R")`
@@ -28,5 +28,7 @@ Please note that the script will overwrite the file if it already exists before 
 
 You can load the clean data set using the `read.table` function, e.g. 
 
-> `data <- read.table("clean_data_set.txt")`
+> `data <- read.table("tidy_data_set.txt")`
+
+> `View(data)`
 
