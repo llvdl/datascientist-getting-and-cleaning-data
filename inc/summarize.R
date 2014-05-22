@@ -1,4 +1,4 @@
-Tidy <- function(data) {
+Summarize <- function(data) {
     r <- split(
         data[order(data$activity.label, data$subject), 1:86], 
         f=interaction(data$activity.label, data$subject))
