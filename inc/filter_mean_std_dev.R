@@ -15,8 +15,8 @@ FilterMeanStdDevColumns <- function(data) {
     }
     
     GetMeanStddevColumnNames <- function() {
-        cols <- GetMeanStddevColumnsIndices()
-        CleanFieldNames(features[cols,2])    
+        names <- grep("mean|std",features[,2], ignore.case=T, value=T)
+        CleanFieldNames(names)
     }
     
     data <- data[, GetMeanStddevColumnsIndices()]
