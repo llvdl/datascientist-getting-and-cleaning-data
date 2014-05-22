@@ -11,11 +11,7 @@ FilterMeanStdDevColumns <- function(data) {
     features <- read.table('UCI HAR Dataset/features.txt')
     
     GetMeanStddevColumnsIndices <- function() {
-        sapply(X=features[,2], function(field) {
-            is_mean <- grep("mean", field, ignore.case=T) != 0;
-            is_std <- grep("std", field, ignore.case=T) != 0;
-            !is.na(is_mean || is_std) && (is_mean || is_std)
-        })
+        grepl("mean|std",features[,2], ignore.case=T)
     }
     
     GetMeanStddevColumnNames <- function() {
